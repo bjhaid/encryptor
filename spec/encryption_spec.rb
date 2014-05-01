@@ -7,4 +7,10 @@ describe Encryption do
 
     encryption.encrypt('a').should be_a String
   end
+
+  it "encrypts 'm' and returns 'z'" do
+    encryption = Encryption.new
+
+    encryption.encrypt('m').should == 'z'
+  end
 end
