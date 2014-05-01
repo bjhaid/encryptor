@@ -31,4 +31,10 @@ describe Encryption do
 
     encryption.encrypt('Z').should == 'M'
   end
+
+  it "does not encrypt special characters" do
+    encryption = Encryption.new
+
+    encryption.encrypt(',').should == ','
+  end
 end
