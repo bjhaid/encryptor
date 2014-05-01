@@ -13,4 +13,16 @@ describe Encryption do
 
     encryption.encrypt('m').should == 'z'
   end
+
+  it "encrypts 'z' and returns 'm'" do
+    encryption = Encryption.new
+
+    encryption.encrypt('z').should == 'm'
+  end
+
+  it "encrypts 'Z' and returns 'M'" do
+    encryption = Encryption.new
+
+    encryption.encrypt('Z').should == 'M'
+  end
 end
