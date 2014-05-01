@@ -25,4 +25,10 @@ describe Encryption do
 
     encryption.encrypt('Z').should == 'M'
   end
+
+  it "encrypts 'Z' and returns 'M'" do
+    encryption = Encryption.new
+
+    encryption.encrypt('Z').should == 'M'
+  end
 end
