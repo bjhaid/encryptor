@@ -37,4 +37,10 @@ describe Encryption do
 
     encryption.encrypt(',').should == ','
   end
+
+  it "encrypts 'Hello World!' to 'Uryyb Jbeyq!'" do
+    encryption = Encryption.new
+
+    encryption.encrypt("Hello World!").should == 'Uryyb Jbeyq!'
+  end
 end
