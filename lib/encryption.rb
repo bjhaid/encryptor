@@ -42,17 +42,7 @@ module FileParser
   end
 
   def self.write_file(filename, text)
-    # if File.exists?(filename)
-      # puts "File already exist. Do you want to overwrite?(y/n)"
-      # answer = gets.chomp
-      # if answer == "y" || "Y"
-        File.open(filename, 'w'){ |f| f.write(text) }
-      # else
-        # puts "Enter filename"
-        # name = gets.chomp
-        # File.open(gets.chomp, 'w'){ |f| f.write(text) }
-      # end
-    # end
+    File.open(filename, 'w'){ |f| f.write(text) }
   end
 end
 
@@ -61,3 +51,20 @@ end
 encryptor = Encryption.new
 text = encryptor.encrypt_from_file("hello_world.txt")
 # p FileParser.write_file("secret_text.txt", "Hello, how are you?")
+
+
+
+# def self.write_file(filename, text)
+    # if File.exists?(filename)
+      # puts "File already exist. Do you want to overwrite?(y/n)"
+      # answer = gets.chomp
+      # if answer == "y" || "Y"
+        # File.open(filename, 'w'){ |f| f.write(text) }
+      # else
+        # puts "Enter filename"
+        # name = gets.chomp
+        # File.open(gets.chomp, 'w'){ |f| f.write(text) }
+      # end
+    # end
+  # end
+# end
