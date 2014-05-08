@@ -19,4 +19,9 @@ class Encryption
     end
   end
 
+  def encyrpt_file(file)
+    File.open("encrypted_file", "w") { |f| f.puts encrypt(File.read(file)) }
+    File.absolute_path("encrypted_file")
+  end
+
 end
